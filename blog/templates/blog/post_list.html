@@ -13,11 +13,19 @@
 			<p>Co vše lze začít na výkumu, nejen archeologickém.</p>
 		</div>
 
+
 		<div>
+
             <p>published: 17.05.2015, 12:14</p>
             <h2><a href="">Výzkum2 </a></h2>
             <p>Aenean eu leo quam. Pellentesque ornare sem</p>
          </div>		
-		
+	{% for post in posts %}
+    	<div>
+        	<p>published: {{ post.published_date }}</p>
+        	<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaks }}</p>
+    	</div>
+{% endfor %}
 	</body>
 </html>
